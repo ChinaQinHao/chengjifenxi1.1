@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            font-family: fangzhengkaiti;
+        }
+        .box1{
+            height: 43.75rem;
+            background: url(https://cheng-ji-fen-xi.oss-cn-hangzhou.aliyuncs.com/bj.jpg);
+
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        .span1{
+            color: white;
+        }
+        .h11{
+            color: white;
+        }
+        .picture{
+            height: 90rem;
+            width: 45rem;
+            background: url(https://cheng-ji-fen-xi.oss-cn-hangzhou.aliyuncs.com/bj.jpg);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #90EE90;
+            font-size: 1.875rem;
+            position: relative;
+
+        }
+        .p1{
+            color: white;
+            font-size: 1.875rem;
+
+        }
+        .h22{
+            font-size: 1.875rem;
+            color: #90EE90;
+        }
+        .img{
+            height: 25rem;
+            background-repeat:no-repeat;
+            background-size: cover;
+            float: left;
+            position: relative;
+            top: 1.25rem;
+            text-align:center;
+            margin-left: .9375rem;
+        }
+        img{
+            height: 20rem;
+            width: 30rem;
+            margin-left: .9375rem;
+            object-fit:contain;
+            background-color: rgb(255,0,0,0);
+            
+            }
+        h2{
+            text-align:center;
+            position: relative;
+            top: 2rem;
+            margin-bottom :3rem;
+        }
+        @font-face{
+            font-family: fangzhengkaiti;
+            src: url(FZKTJW.TTF);
+        
+        }
+        .beian{
+            position: absolute;
+            bottom:  5%;
+            right: 45%;
+            color: white;
+            font-size: .4375rem;
+        
+    }
+    #all{
+        height: 90rem;
+        width: 45rem;
+            margin-left: .9375rem;
+            object-fit:contain;
+            background-color: rgb(255,0,0,0);
+    }
+    </style>
+    <script>
+        
+        function ReadFile(data) {
+            console.log(data)
+            result2 = data.split("\r\n");
+            console.log(result2);
+
+            const km = result2[1]
+            const resultkm = eval(km)
+            console.log(resultkm)
+            
+            const name = result2[0]
+            const allname = eval(name)
+            console.log(allname)
+            
+            var username = prompt('请输入您的姓名')
+            if (allname.indexOf(username)>-1){
+                prompt('请输入考号')
+                a= `<div class="picture">`
+                a+= `<h2 >总览</h2>`
+                a+= `<img src="全班成绩/${username}/0各科成绩对比.jpg" alt="" id='all'>`
+                a+= `</div>`
+                $(".meg").append(a);
+                for (var i=0;i<=parseInt(result2[2])-1;i++){
+                    a = `<div class="picture">`;
+                    a += `<h2 >${resultkm[i]}成绩</h2>`
+                    a +=`<div class="img">`;
+                    a += `<p class="p1">占全班比例</p>`;
+                    a += `<img src="全班成绩/${username}/${resultkm[i]}全班.jpg" alt="">`;
+                    a += `</div>`
+                    a +=`<div class="img">`;
+                    a += `<p class="p1">历次成绩折线</p>`;
+                    a += `<img src="全班成绩/${username}/${resultkm[i]}.jpg" alt="">`;
+                    a += `</div>`
+                    a +=`<div class="img">`;
+                    a += `<p class="p1">与分段/全班对比</p>`;
+                    a += `<img src="全班成绩/${username}/${resultkm[i]}成绩对比.jpg" alt="">`;
+                    a+=`</div>`;
+                    a += `</div>`;
+                    $(".meg").append(a);
+                }
+            }
+            else{
+                alert('未找到该用户')
+            }
+        }     
+        var xhr = new XMLHttpRequest();
+        sc = xhr.onload = function () {            
+            return sc = ReadFile(xhr.responseText);
+                 
+                
+        };
+        try {
+                xhr.open("get", "通信文件.txt", true);
+                xhr.send();
+        }
+        catch (ex) {
+                console.log("catch")
+                ReadFile(ex.message);
+        }
+        
+    </script>
+
+</head>
+<body>
+    <!-- <div class="box1">
+        <h1 class="h11">hello~<br>
+            <span class="span1">这是秦昊的个人网站——成绩分析专区
+                <br><br><br><br><br>
+                <h2 class="h22">注:本成绩分析为随机数生成,非作者真实成绩<br>本作品使用阿里云服务器</h2>
+            </span>
+        </h1>
+    </div> -->
+
+    <div class="meg"></div>
+
+    <!-- <div class="picture">
+        <h2 >语文成绩</h2>
+        <div class="img">
+            <p class="p1">占全班比例</p>
+            <img src="" alt="">
+        </div>
+        <div class="img">
+            <p class="p1">历次成绩折线</p>
+            <img src="https://cheng-ji-fen-xi.oss-cn-hangzhou.aliyuncs.com/%E7%A7%A6%E6%98%8A/%E8%AF%AD%E6%96%87.jpg" alt="">
+        </div>
+        <div class="img">
+            <p class="p1">与分段/全班对比</p>
+            <img src="
+            https://cheng-ji-fen-xi.oss-cn-hangzhou.aliyuncs.com/%E7%A7%A6%E6%98%8A/%E8%AF%AD%E6%96%87%E6%88%90%E7%BB%A9%E5%AF%B9%E6%AF%94.jpg" alt="">
+        </div>
+    </div> -->
+
+    
+</body>
+</html>
