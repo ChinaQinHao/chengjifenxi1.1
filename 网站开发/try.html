@@ -1,52 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f2f2f2;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        .left {
-            flex: 1;
-            background-color: lightblue;
-            padding: 20px;
-        }
-
-        .right {
-            flex: 1;
-            background-color: lightgreen;
-            padding: 20px;
-        }
-    </style>
-    <title>左右布局示例</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.css">
+  <title>Bootstrap Responsive Example</title>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <h2>Left Content</h2>
-            <p>This is the left div.</p>
-        </div>
-        <div class="right">
-            <h2>Right Content</h2>
-            <p>This is the right div.</p>
-        </div>
+  <div class="container">
+    <h1 class="text-center">Bootstrap Responsive Example</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Left Content</h2>
+        <p>This is the left column.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Right Content</h2>
+        <p>This is the right column.</p>
+      </div>
     </div>
+  </div>
+  
+  <script src="bootstrap.js"></script>
 </body>
 </html>

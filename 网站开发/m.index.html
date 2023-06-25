@@ -17,15 +17,17 @@
             background-color: #0E0F34;
         }
         h1{
+            font-size: 10rem;
+            color: white;
+
+
+        }
+        h2{
             font-size: 5rem;
             color: white;
         }
-        h2{
-            font-size: 2.5rem;
-            color: white;
-        }
         p{
-            font-size: 1.5rem;
+            font-size: 4rem;
             color:honeydew;
         }
         #exe{
@@ -53,15 +55,14 @@
             flex-direction: row;
         }
         .imgdiv{
-            float: left;
-            width: 25%;
+            height: 17%;
         }
         .img2{
-            max-width: 97%;
-            height: auto;
+            max-height:85%;
+            width: auto;
         }
         h3{
-            font-size: 1.25rem;
+            font-size: 4rem;
             color:azure;
         }
         #explain{
@@ -73,6 +74,10 @@
         #downloadfont{
             font-size: 2rem;
         }
+        p{
+            margin: 0;
+
+        }
     </style>
     <title>基于python的可视化成绩分析</title>
 </head>
@@ -82,20 +87,22 @@
     <div id="fullpage">
         
         <div class="section">
-            <h1>基于python的可视化成绩分析</h1>
+            <h1 >基于 python的 <br>可视化成绩分析</h1>
             <h2 data-aos="fade-in" data-aos-delay="100">秦昊</h2>
-            <p data-aos="fade-in" data-aos-delay="200">这是一个基于python的可视化成绩分析, <span id="exe">他已被打包成一个exe文件！</span> 
+            <p data-aos="fade-in" data-aos-delay="200">这是一个基于python的可视化成绩分析, <span id="exe"> <br>他已被打包成一个exe文件！</span> 
                 <br><br> 你只需要上传一个以.xls为后缀的成绩单，他会为你提供可视化的图表,并生成在你电脑的磁盘上！你可以随意的分享修改他们</p>
-                <a href="https://cheng-ji-fen-xi.oss-cn-hangzhou.aliyuncs.com/%E6%88%90%E7%BB%A9%E5%88%86%E6%9E%90_%E5%AE%89%E8%A3%85.exe" data-aos="zoom-in-left" data-aos-delay="500" ><div id="download"><span id="downloadfont">在Windows上下载</span></div></a>
+                
+            <h2 style="color: gold;"><strong>请使用电脑下载</strong></h2>
         </div>
 
         <div class="section" id="second" >
             <h2 style="font-weight: bolder;"data-aos="fade-right" data-aos-delay="200">作品效果</h2>
             <h3 data-aos="fade-right" data-aos-delay="100">程序运行后会在您的电脑生成这四种类型的图片 </h3>
             <h3 data-aos="fade-right" data-aos-delay="100">您可以从不同的方面得出具体到各科的学习情况</h3>
+            
             <div data-aos="fade-up" data-aos-delay="200" class="imgdiv">
                 <img src="img/0各科成绩对比.jpg" title="这是总览图，在这里你可以非常直观的看到每一课的学习情况" class="img2">
-                <p>总览图</p>
+                <p >总览图</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="300"class="imgdiv">
                 <img src="img/物理成绩对比.jpg" alt=""class="img2" title="这是单科成绩对比图，它与全班平均分，分段平均分对比，以看该课出在全班和分段的情况">
@@ -112,7 +119,7 @@
             </div>
             <!-- <h2 data-aos="fade-up" data-aos-delay="200" >第二部分</h2> 
             <p data-aos="fade-in"data-aos-delay="200">这是第二部分的内容</p> -->
-            <h3 id="explain"data-aos="fade-right" data-aos-delay="500">分段平均分：将全班学生按总分，每十个人分成一个分段，在分段内再求平均分以看出学生是否存在偏科现象</h3>
+            <!-- <h3 id="explain"data-aos="fade-right" data-aos-delay="500">分段平均分：将全班学生按总分，每十个人分成一个分段，在分段内再求平均分以看出学生是否存在偏科现象</h3> -->
 
 
         </div>
@@ -121,23 +128,23 @@
             <h2 data-aos="fade-up"data-aos-delay="200">使用</h2>
             <p data-aos="fade-in"data-aos-delay="200">请阅读github文档</p>
             <h2> <span class="Q"data-aos="fade-right" data-aos-delay="100">Q：我的成绩单是否会被泄露？</span> <br>
-                <span data-aos="fade-left" data-aos-delay="200">A：绝对不会！它不具有联网的功能，一切程序均在本地运行</span>
+                <span data-aos="fade-left" data-aos-delay="200">A：绝对不会！它不具有联网的功能， <br>一切程序均在本地运行</span>
             </h2>
             <h2><span class="Q"data-aos="fade-right" data-aos-delay="300">Q：图像存放在哪里了？</span> <br>
                 <span data-aos="fade-left" data-aos-delay="400">A：在程序同目录下</span>
             </h2>
             <h2><span class="Q"data-aos="fade-right" data-aos-delay="500">Q：我怎么分享给学生？</span> <br>
-                <span data-aos="fade-left" data-aos-delay="600">A：我正在积极学习python网站开发，到那时您只需要上传成绩单学生就可以查询了</span>
+                <span data-aos="fade-left" data-aos-delay="600">A：我正在积极学习python网站开发， <br>到那时您只需要上传成绩单学生就可以查询了</span>
             </h2>
         </div>
         <div class="section"> 
             <h2 data-aos="fade-up" data-aos-delay="100">合作</h2>
-            <h3 style="text-align: left; "data-aos="fade-up" data-aos-delay="300"> <span style="color: aqua;">我没有找到卧龙学校校方任何合作人的联系方式，准确的说，这个程序与卧龙学校校方没有任何参与，我非常希望与校方合作，却找不到任何途径。<br>
-                如果您是卧龙学校的成绩发布或分析部门的人员，请联系我：1576966078@qq.com，我将第一时间回应您</span><br><br><br>
-                李云霞：提供了所有的成绩单辅助我进行测试 <br>
-                李家亮：对我的研究报告和改进计划提出了大量建议<br>
-                张瑞娟：提供了正在示例网站上发布的成绩单<br>
-                辰森教育：提供了编程等方面的支持，招生电话05393318866
+            <h3 style="text-align: left; "data-aos="fade-up" data-aos-delay="300"> <span style="color: aqua;">我没有找到卧龙学校校方任何合作人的联系方式，准确的说， <br>这个程序与卧龙学校校方没有任何参与，我非常希望与校方合作，却找不到任何途径。<br>
+                如果您是卧龙学校的成绩发布或分析部门的人员，请联系我：1576966078@qq.com， <br>我将第一时间回应您</span><br><br><br>
+                李云霞：提供了所有的成绩单辅助我进行测试 <br><br>
+                李家亮：对我的研究报告和改进计划提出了大量建议<br><br>
+                张瑞娟：提供了正在实例网站上发布的成绩单<br><br><br><br>
+                <p style="color: yellow;">辰森教育：提供了编程等方面的支持，招生电话05393318866</p>
             </h3>
         </div>
     </div>
@@ -156,17 +163,7 @@
                 }
             });
         });
-        function goPAGE() {
-            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-                window.location.href="m.index.html";
-            }
-        }
-        goPAGE();
-
-        
         document.documentElement.style.fontSize=document.documentElement.clientWidth/720 * 6 +'px';
-        
-
     </script>
 </body>
 </html>
