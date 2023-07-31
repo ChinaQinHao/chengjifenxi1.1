@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import filedialog
 import webbrowser as web
 import tkinter
+
 #from tkinter import ttk
 
 
@@ -48,6 +49,7 @@ def 读取(name):
     data_row_history.append([sheet_1.row_values(i) for i in range(sheet_1.ncols)])
     读取数量 = 读取数量 + 1
 
+
 def 打开文件资源管理器():
     root = tk.Tk()
     root.withdraw()
@@ -80,7 +82,8 @@ for i in range(读取次数-1):
 work_book = xlrd.open_workbook(第一次读取)  # 读取成绩单
 sheet_1 = work_book.sheet_by_index(0)
 
-
+print(data_row_history)
+print(data_col_history)
 # x_axis_data = []
 # y_axis_data = []
 
@@ -204,7 +207,9 @@ def 折线图():
 
     for i in range(len(输出成绩)):
         输出成绩[i].reverse()
+
     y_axis_data = 输出成绩
+    print("!!!",y_axis_data)
     for i in range(len(输出科目)):
 
         # print(y_axis_data)
@@ -219,6 +224,8 @@ def 折线图():
         plt.xlabel('考试次数')
         plt.ylabel('分数')
         for x in range(读取数量):
+            print(y_axis_data)
+            print(读取数量)
             plt.text(x_axis_data[x], float(y_axis_data[i][x]) + 0.2, str(y_axis_data[i][x]))
         plt.savefig('{1}/{0}.jpg'.format(输出科目[i], username))
         plt.close()
@@ -283,6 +290,8 @@ for i in range(科目数量):
 个人各科成绩 = list(科目name)  # 读取各个科目
 个人各科成绩排名 = []
 所处分段 = 0
+print(data_row_history)
+print(data_col_history)
 print('指引:请输入"秦昊"')
 username = input("请输入您的姓名")
 # 暂时修改
@@ -321,6 +330,7 @@ if username in allname:
     保存txt()
 
     web.open('cjfx.qinhao2008.top')
+
 
 else:
     print('对不起，没有找到相关学生')
