@@ -315,7 +315,7 @@ result_col, result_row = 选择科目()
 data_row = result_row[0]
 data_col = result_col[0]
 
-print(data_col)
+# print(data_col)
 # 删除第一横排第一项：姓名
 data_row[0].pop(0)
 # 设置全班名字，删除第一竖排第0项‘姓名’
@@ -361,8 +361,8 @@ for i in range(科目数量):
 print('指引:请输入"秦昊"')
 username =input("请输入您的姓名")
 # 暂时修改
-print(data_col_history)
-print(data_row_history)
+# print(data_col_history)
+# print(data_row_history)
 if username in allname:
     print('查询到以下结果')
     # [[['秦昊', '孙文旭', '柏昕彤', '王福栋', '郑文轩', '李勇昊', '杜文慧', '冯雨晴', '杨曦', '王宇浩', '鲍明浩', '李清睿', '朱万达', '秦国强', '曹哲', '祝怀美',
@@ -453,12 +453,12 @@ if username in allname:
         个人各科成绩[i] = 科目字典[i].get(username)
         # 将个人各科排名添加进列表
         个人各科成绩排名.append(各科成绩排名[i].index(个人各科成绩[i]))
-        print(科目name[i], 个人各科成绩[i])
+        # print(科目name[i], 个人各科成绩[i])
 
     # 处理分段分数
     # 获取个人分段
-    print(个人各科成绩排名)
-    print(个人各科成绩)
+    # print(个人各科成绩排名)
+    # print(个人各科成绩)
     所处分段 = (个人各科成绩排名[-1] + 1) // 10
     for i in range(科目数量):
         # 计算平均分
